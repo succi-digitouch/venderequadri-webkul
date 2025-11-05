@@ -1,0 +1,15 @@
+OGGETTO: Articoli evasi e spediti
+---
+Gentile {$customer_name}
+
+La informiamo che i seguenti articoli sono stati evasi e sono ora in spedizione.
+
+{$fulfilled_items_details}
+
+Numero di tracciamento: {$tracking}
+Metodo di spedizione: {$shipping_method}
+Nome Negozio: {$store_name}
+Nome Venditore: {$seller_name}
+
+Cordiali saluti
+{$shop}

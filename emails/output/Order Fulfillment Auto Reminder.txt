@@ -1,0 +1,14 @@
+OGGETTO: Evadi i tuoi ordini
+---
+Gentile {$seller_name}
+
+Le ricordiamo che non ha ancora evaso i Suoi ordini.
+
+La preghiamo di controllare ed evadere i Suoi ordini il prima possibile.
+
+Riepilogo ordini:
+ID Ordine | Cliente | Stato Pagamento | Stato Evasione | Totale Ordine
+{$order.id} | {$order.customer} | {$order.payment_status} | {$order.fulfillment} | {$currency_symbol}{$order.total_price}
+
+Cordiali saluti
+{$shop}

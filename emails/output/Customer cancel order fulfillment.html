@@ -1,0 +1,24 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile <span style="color: #2a5b8b;">{$customer_name|default:'cliente'}</span></h3>
+<p>La informiamo che l'evasione dei seguenti articoli è stata annullata.</p>
+{if !empty($item_names) && $item_names} <strong>Le spedizioni dei seguenti articoli sono state annullate:</strong>
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px;">
+<thead>
+<tr style="text-transform: capitalize;">
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Nome Prodotto</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Prezzo</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">QTÀ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$value.product_name}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$currency_symbol}{$value.price}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$quantity[$key]}</td>
+</tr>
+</tbody>
+</table>
+{/if}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop|default:"admin"}</h3>
+</div>

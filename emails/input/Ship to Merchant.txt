@@ -1,0 +1,16 @@
+SUBJECT: Order shipment Ready for Merchant
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>This is to inform you that your order products of <strong>order #{$oid}</strong> have been fulfilled.</p>
+{if !empty($tracking_url)}
+<p>You can download label for <strong>order #{$oid}</strong> from here</p>
+<strong><a href="{$tracking_url}">click Here</a></strong> {/if}
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name

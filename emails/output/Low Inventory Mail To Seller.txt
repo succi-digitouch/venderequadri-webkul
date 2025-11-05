@@ -1,0 +1,11 @@
+OGGETTO: Rilevate scorte basse
+---
+Gentile {$seller_name},
+
+La informiamo che i seguenti prodotti hanno scorte basse:
+
+ID Prodotto | Nome Prodotto | Quantità
+{$product['id']} | {$product['product_name']} | {$product['quantity']}
+
+Cordiali saluti
+{$seller_store_name}

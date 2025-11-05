@@ -1,0 +1,13 @@
+OGGETTO: Prodotto disapprovato
+---
+Gentile {$seller_name}
+
+La informiamo che il seguente prodotto è stato disapprovato.
+
+Per ottenere l'approvazione del prodotto, contatti il merchant.
+
+Dettagli prodotto:
+{$product_details}
+
+Cordiali saluti
+{$shop}

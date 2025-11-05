@@ -1,0 +1,13 @@
+OGGETTO: Tracciamento aggiornato per l'ordine
+---
+Gentile cliente
+
+La informiamo che i dettagli di tracciamento dell'ordine sono stati aggiornati.
+
+I dettagli di tracciamento aggiornati sono i seguenti:
+
+Numero di tracciamento - N/D
+Metodo di spedizione - metodo di spedizione
+
+Cordiali saluti
+{$shop}

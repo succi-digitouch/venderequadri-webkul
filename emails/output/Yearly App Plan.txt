@@ -1,0 +1,14 @@
+OGGETTO: Piano annuale accettato
+---
+Gentile Admin
+
+La informiamo che Le è stato addebitato ${$usageCharge.price} per il Suo Piano Annuale App.
+
+Dettagli:
+Nome Piano: {$plan_name}
+Prezzo Piano: ${$plan_price}
+Data Transazione: {$time}
+Importo Fatturato: ${$usageCharge.price}
+
+Cordiali saluti
+MultiVendor Marketplace

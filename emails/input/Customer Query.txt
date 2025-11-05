@@ -1,0 +1,27 @@
+SUBJECT: Customer Query
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>This is to inform you that a customer ({$customer_name}) has Submitted query for {$seller_store}.</p>
+<p>Email : {$customer_email}</p>
+<p>Query : {$customer_query}</p>
+<p>Contact : {$customer_contact}</p>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$customer_name}-Name of Customer
+{$seller_store}-Name of Seller Store
+{$customer_email}-Email of Customer
+{$customer_query}-Customer Query
+{$customer_contact}-Customer Contact
+Note :
+
+The variables below are included in the email template exclusively when the customer submits their query from the product page.
+
+{$product_name}-Product Name
+{$product_link}-Product Link

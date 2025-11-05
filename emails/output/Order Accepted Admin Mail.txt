@@ -1,0 +1,11 @@
+OGGETTO: Ordine accettato dal venditore
+---
+Gentile {$shop},
+
+La informiamo che i seguenti articoli nell'ordine id #{$oid} sono stati accettati dal venditore {$seller_name}.
+
+Nome Prodotto | QTÀ Ordinata | QTÀ Accettata
+{$product_name} | {$quantity[$key]} | {$accepted_quantity[$key]}
+
+Cordiali saluti
+{$seller_store_name}

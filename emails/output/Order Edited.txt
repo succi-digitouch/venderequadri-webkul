@@ -1,0 +1,18 @@
+OGGETTO: Ordine modificato
+---
+Gentile {$shop},
+
+La informiamo che l'ordine #{$oid} è stato modificato/aggiornato.
+
+Dettagli prodotto:
+ID Ordine: #{$value.oid}
+Numero Ordine Shopify: {$value.order_name}
+ID Venditore: {$seller_id_mail}
+Nome Negozio: {$seller_store_name}
+ID Prodotto: {$value.product_id}
+Nome Prodotto: {$value.product_name}
+Prezzo: {$value.variable_price}
+Quantità: {$value.quantity}
+
+Cordiali saluti
+{$shop}

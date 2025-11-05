@@ -1,0 +1,9 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>La informiamo che i prodotti del Suo ordine <strong>ordine #{$oid}</strong> sono stati evasi.</p>
+{if !empty($tracking_url)}
+<p>Può scaricare l'etichetta per <strong>ordine #{$oid}</strong> da qui</p>
+<strong><a href="{$tracking_url}">clicca Qui</a></strong> {/if}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>

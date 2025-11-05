@@ -1,0 +1,27 @@
+SUBJECT: Auto Disable Products
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>This is to inform you that&#160;following products&#160;has been disabled.</p>
+{foreach from=$product_details item=product}{/foreach}
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; font-size: 15px; width: 100%; max-width: 400px;">
+<tbody>
+<tr style="background: #f5f5f5;">
+<th>Product ID</th>
+<th>Product Name</th>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="{$product.seller_link}" target="_blank" rel="noopener noreferrer">{$product.sp_id_product}</a></td>
+<td style="text-align: center;">{$product.product_name}</td>
+</tr>
+</tbody>
+</table>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$product_details}-Details of product

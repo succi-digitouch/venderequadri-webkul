@@ -1,0 +1,14 @@
+OGGETTO: Prodotto pubblicato automaticamente - notifica Admin
+---
+Gentile Admin
+
+La informiamo che il prodotto è stato pubblicato come programmato. Il prodotto è ora attivo sul negozio e visibile ai clienti.
+
+Dettagli Prodotto:
+ID Prodotto: {$product_id}
+Nome Prodotto: {$product_name}
+Quantità: {$quantity}
+Nome Venditore: {$seller_name}
+
+Cordiali saluti
+{$shop}

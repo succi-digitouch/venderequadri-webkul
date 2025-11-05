@@ -1,0 +1,18 @@
+SUBJECT: Items are delivered
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">Hello <span style="color: #2a5b8b;">{$customer_name}</span></h3>
+<p>This is to inform you that following items has been successfully delivered to you on {$deliver_date}.</p>
+<strong>Delivered items are:</strong> {$delivered_items_details}
+<p>Thank you for using our service.</p>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$customer_name}-Name of customer
+{$shop}-Shop Name
+{$delivery_date}-Date of delivery
+{$delivered_items_details}-Details of products delivered
+{$order_name}-Order Name
+{$discount_amount}-Discount Amount.

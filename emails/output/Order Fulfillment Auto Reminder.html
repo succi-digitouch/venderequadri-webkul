@@ -1,0 +1,27 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>Le ricordiamo che non ha ancora evaso i Suoi ordini.</p>
+<p>La preghiamo di controllare ed evadere i Suoi ordini il prima possibile.</p>
+{if !empty($orders_summary)}{foreach $orders_summary as $key => $order}{/foreach}
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px;">
+<tbody>
+<tr>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">ID Ordine</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Cliente</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Stato Pagamento</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Stato Evasione</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Totale Ordine</th>
+</tr>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$order.id}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$order.customer|escape:"htmlall"}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$order.payment_status}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$order.fulfillment}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$currency_symbol}{$order.total_price}</td>
+</tr>
+</tbody>
+</table>
+{/if}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>

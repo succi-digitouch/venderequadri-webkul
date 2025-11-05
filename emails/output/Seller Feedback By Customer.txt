@@ -1,0 +1,8 @@
+OGGETTO: Feedback venditore da parte del cliente
+---
+Gentile Admin
+
+La informiamo che un cliente ({$customer_name}) ha lasciato un feedback per {$seller_store}.
+
+Cordiali saluti
+{$shop}

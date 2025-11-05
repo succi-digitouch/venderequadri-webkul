@@ -1,0 +1,8 @@
+OGGETTO: Modifica Prodotti in Blocco tramite CSV
+---
+Gentile Admin
+
+La informiamo che il venditore {$seller_name} ha modificato i prodotti tramite CSV.
+
+Cordiali saluti
+{$shop}

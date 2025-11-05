@@ -1,0 +1,13 @@
+SUBJECT: Storage Limit Notification To Admin
+---
+<div style="font-size: 15px; line-height: 20px;">
+<p>Hello Admin,</p>
+<p>We wanted to inform you that your current storage usage has reached a critical threshold.You now have only<strong>{$remaining_space} MB</strong>of storage remaining in your account.</p>
+<p>Regards,<br /><strong>{$shop|default:"admin"}</strong></p>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$remaining_space}-Remaining Storage

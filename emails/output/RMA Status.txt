@@ -1,0 +1,10 @@
+OGGETTO: Stato RMA aggiornato
+---
+Gentile {$shop}
+
+La informiamo che la richiesta RMA (#{$rma_id}) per l'ordine (#{$oid}) è stata aggiornata da {$seller_name}.
+
+Il nuovo stato è {$status}.
+
+Cordiali saluti
+Multivendor Marketplace

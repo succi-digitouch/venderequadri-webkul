@@ -1,0 +1,10 @@
+OGGETTO: Benvenuto venditore
+---
+Gentile {$seller_name}
+
+Grazie per essersi registrato. Ora fa parte di {$shop}.
+
+Accedi: {$public_url}
+
+Cordiali saluti
+{$shop}

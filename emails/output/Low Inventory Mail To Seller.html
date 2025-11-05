@@ -1,0 +1,24 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile {$seller_name},</h3>
+<p>La informiamo che i seguenti prodotti hanno scorte basse</p>
+{if !empty($product_details) && $product_details}{foreach $product_details as $product}{/foreach}
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px;">
+<thead>
+<tr style="text-transform: capitalize;">
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">ID Prodotto</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Nome Prodotto</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Quantità</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$product['id']}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$product['product_name']}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$product['quantity']}</td>
+</tr>
+</tbody>
+</table>
+{/if}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">{$seller_store_name}</h3>
+</div>

@@ -1,0 +1,12 @@
+OGGETTO: Nuovo commento aggiunto a RMA
+---
+Gentile {$seller_name}
+
+La informiamo che è stato aggiunto un nuovo commento da parte di {$first_name} {$last_name} alla richiesta RMA per l'ordine #{$oid}.
+
+Commento: {$comment}
+
+Acceda al Suo account per maggiori dettagli.
+
+Cordiali saluti
+{$shop}

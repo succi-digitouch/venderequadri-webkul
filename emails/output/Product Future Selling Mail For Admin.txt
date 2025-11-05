@@ -1,0 +1,13 @@
+OGGETTO: Prodotto disponibile per la vendita - notifica Admin
+---
+Gentile Admin
+
+Siamo lieti di informarLa che il prodotto è ora disponibile per l'acquisto. Come da programmazione impostata, i clienti possono ora acquistare il prodotto.
+
+ID Prodotto: {$product_id}
+Nome Prodotto: {$product_name}
+Quantità: {$quantity}
+Nome Venditore: {$seller_name}
+
+Cordiali saluti
+{$shop}

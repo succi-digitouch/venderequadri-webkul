@@ -1,0 +1,10 @@
+OGGETTO: Venditore disapprovato
+---
+Gentile {$seller_name}
+
+La informiamo che il Suo account è inattivo.
+
+Per attivare il Suo account, contatti il merchant.
+
+Cordiali saluti
+{$shop}

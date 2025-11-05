@@ -1,0 +1,10 @@
+OGGETTO: Spedizione Ordine Pronta
+---
+Gentile {$seller_name}
+
+La informiamo che i prodotti del Suo ordine #{$oid} sono stati evasi.
+
+Può scaricare l'etichetta da: {$tracking_url}
+
+Cordiali saluti
+{$shop}

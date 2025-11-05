@@ -1,0 +1,15 @@
+OGGETTO: Nuovo venditore registrato
+---
+Gentile {$shop}
+
+La informiamo che un nuovo venditore si è registrato al Suo sito.
+
+Nome Venditore: {$seller_name}
+Email Venditore: {$seller_email}
+ID Venditore: {$seller_id}
+
+Informazioni Aggiuntive:
+{$value['display_name']}: {$value['input_name']}
+
+Cordiali saluti
+Multi Vendor Marketplace

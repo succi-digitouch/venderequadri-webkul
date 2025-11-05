@@ -1,0 +1,14 @@
+OGGETTO: Riapprovazione prodotto rifiutata
+---
+Gentile {$seller_name}
+
+La informiamo che la riapprovazione del prodotto (#{$pid}) è stata rifiutata.
+
+Motivo del rifiuto:
+{$deny_reason}
+
+Dettagli prodotto:
+{$product_details}
+
+Cordiali saluti
+{$shop}

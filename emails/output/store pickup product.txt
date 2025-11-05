@@ -1,0 +1,14 @@
+OGGETTO: Prodotto per ritiro in negozio
+---
+Gentile {$customer_name}
+
+Grazie per il Suo acquisto.
+
+Dettagli prodotti per ritiro in negozio:
+
+Nome Prodotto: {$product.product_name}
+Indirizzo Ritiro: {$product.product_address}
+Data Ritiro Proposta: {$product.shipping_date}
+
+Cordiali saluti
+{$shop}

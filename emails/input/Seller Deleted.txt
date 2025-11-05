@@ -1,0 +1,26 @@
+SUBJECT: Seller Deleted
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">Hello <span style="color: #2a5b8b;">{$shop|default:"admin"}</span></h3>
+<p>This is to inform you that a seller has been deleted.</p>
+<p>Seller ID : {$seller_id}</p>
+<p>Seller Store Name : {$store_name}</p>
+<p>Seller Name : {$seller_name}</p>
+<p>Seller Email : {$seller_email}</p>
+{if !empty($custom_field)}
+<p><b>Extra Information ::</b></p>
+{foreach $custom_field as $value}
+<p>{$value['display_name']} : {$value['input_name']}</p>
+{/foreach}{/if}
+<p>Thanks &amp; Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$seller_id}-Seller ID
+$custom_field-Custom Field of Seller
+{$value['display_name']}-Name of the Custom Field
+{$value['input_name']}-Value of the Custom Field

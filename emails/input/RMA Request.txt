@@ -1,0 +1,21 @@
+SUBJECT: RMA request initiated
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">Hello <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>This is to inform you that {$rma_type} request for order #{$oid} has been initiated.</p>
+{if !empty($comment)}
+<p>Comment/Reason: {$comment}</p>
+{/if}
+<p>Login to your account to get more details.</p>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$oid}-Order ID
+{$rma_type}-RMA type
+{$order_name}-Shopify Order Name
+{$comment}-Comment/Reason of RMA initiation.

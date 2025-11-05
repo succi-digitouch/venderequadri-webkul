@@ -1,0 +1,16 @@
+SUBJECT: Tracking updated for order
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">customer</span></h3>
+<p>This is to inform you that the tracking details for order has been updated.</p>
+<p>Updated tracking details are as follows:</p>
+<p style="word-wrap: break-word;">Tracking Number - N/A</p>
+<p>Shipping Method - shipping method</p>
+<p>Cheers</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">cjfh11-ee</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name

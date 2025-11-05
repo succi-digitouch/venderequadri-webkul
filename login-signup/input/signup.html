@@ -1,0 +1,378 @@
+{function getAnimatedCheckbox}
+<label class="wk-cbx" for="{$cbx_data.cbx_for}">
+		<span>
+			<svg width="12px" height="10px">
+			<use xlink:href="#wk-cbx-svg"></use>
+			</svg>
+			{* fetch svg file from footer with id wk-cbx-svg*}
+		</span>
+    {if !empty($cbx_data.title)}
+    <span class="wk-cbx-title {$cbx_data.class} ">{$cbx_data.title}</span>
+    {/if}
+</label>
+{/function}
+<div class="container-fluid mp-margin-top-50">
+    {if $seller_membership_new}
+    <!-- {* Seller Membership plans modal *} -->
+    <div class="modal fade" data-backdrop="static" id="seller_mplan_modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content no-padding bg-dull">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title text-capitalize" id="myModalLabel">Seller Membership</h4>
+                </div>
+                <div class="modal-body bg-dull">
+                    {if !empty($mmpc_details)}
+                    <div class="mp-control-overflow">
+                        <div class="row">
+                            {foreach $mmpc_details as $plans}
+                            <div class="{if $mmpc_details|count == 1}col-md-12 col-sm-12{else if $mmpc_details|count == 2}col-md-6 col-sm-6{else if $mmpc_details|count >= 3}col-md-4 col-sm-4{/if} col-xs-12 mp-margin">
+                                <div class="card add_card mplan-card text-center">
+                                    <div class="mplan-wrapper mp-control-overflow-300">
+                                        <h4 class="text-capitalize">{$plans.plan_name}</h4>
+                                        <p class="mp-margin-top-20 text-uppercase">
+                                            {if $plans.is_setup_fee == 1}
+                                            SETUP-FEE
+                                        <p class="margin-topbtm-5">
+                                            <strong>{$currency}{$plans.setup_fee_cost}</strong>
+                                        </p>
+                                        {else}
+                                        NO SETUP-FEE
+                                        {/if}
+                                        </p>
+
+                                        <p class="margin-topbtm-10">
+                                            {if $plans.limit_prod}{$plans.num_prod}
+                                            {else}Unlimited
+                                            {/if} products
+                                        </p>
+
+                                        <p class="margin-topbtm-10">
+                                            {if $plans.plan_price == "0.00"}Free Plan
+                                            {else}Paid Plan
+                                            {/if}
+                                        </p>
+
+                                        <p class="margin-topbtm-10">
+                                            {$currency}{$plans.plan_price}
+                                            {if $plans.plan_days == 30}per month
+                                            {else if $plans.plan_days == 180}for 6 months
+                                            {else}per year
+                                            {/if}
+                                        </p>
+
+                                        <div class="text-muted mp-margin-top-10 text-uppercase">
+                                            {if $plans.payment_type == 1}Postpaid
+                                            {else if $plans.payment_type == 2}Prepaid
+                                            {/if}
+                                        </div>
+
+                                        {if !empty($plans.trial_days)}
+                                        <div class="text-muted margin-topbtm-10">{$plans.trial_days} days trial</div>
+                                        {/if}
+
+                                        {if !empty($plans.set_membership_commission)}
+                                        <p class="margin-topbtm-10"><strong>{$plans.ms_comm_value}</strong> % Commission</p>
+                                        {/if}
+
+                                        {if !empty($plans.short_desc)}
+                                        <div class="margin-topbtm-10">{$plans.short_desc}</div>
+                                        {/if}
+                                    </div>
+                                    <div class="mp-margin-top-20 mplan-buy-btn">
+                                        <button type="button" class="wk_btn mp-theme-background prime-btn mp-no-float get_seller_mplan" data-value="{$plans.id}">GET NOW</button>
+                                    </div>
+                                </div>
+                            </div>
+                            {/foreach}
+                        </div>
+                    </div>
+                    {else}
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 mp-margin">
+                            <h2 class="text-center">Currently seller membership is not available</h2>
+                        </div>
+                    </div>
+                    {/if}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default text-capitalize pull-left" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/if}
+    {if !$restrict_seller_signup }
+    <div class="row">
+        <div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8 col-sm-12 col-xs-12 mp-margin-top-50">
+            {if !empty($icon_name)}
+            <div id="customized_icon" class="icon-div"><img src="{$icon_name}"></div>
+            {else}
+            <div class="icon-div">
+                <img src="img/Logo/Seller-Login-Icon.png">
+            </div>
+            {/if}
+            <form id="signup_form" action="index.php?p=signup_process" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="csrf_token" value="{if isset($csrf_token)}{$csrf_token}{/if}">
+                <div class="card add_card mp-form-bg-color">
+                    <div class="mp-margin-top-50">
+                        <div class="row">
+                            <div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                <h4 class="text-uppercase">CREATE ACCOUNT</h4>
+                                <p>Already have an account?
+                                    Go to
+                                    <a href="index.php?p=login" class="link-style">Login</a></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8 col-sm-12 col-xs-12 mp-margin-top-20">
+                                <div id="signup-data" class="">
+                                    <div class="form-group mp-margin text-capitalize">
+                                        <div class="">SELLER NAME<span class="text-danger">*</span></div>
+                                        <input type="text" class="form-control" id="wk_seller_name" name="wk_seller_name" value="{if !empty($signup_cookie)}{$signup_cookie.seller_name}{/if}" autofocus/>
+                                    </div>
+                                    {if isset($allow_seller_to_add_shop_name) && $allow_seller_to_add_shop_name }
+                                    <div class="form-group mp-margin">
+                                        <div class="">SELLER SHOP NAME<span class="text-danger">*</span></div>
+                                        <input type="text" class="form-control" id="wk_seller_store_name" name="wk_seller_store_name" value="{if !empty($signup_cookie)}{$signup_cookie.wk_seller_store_name}{/if}" autofocus/>
+                                    </div>
+                                    {/if}
+
+                                    {if isset($seller_signup_option) && $seller_signup_option == 2}
+                                    <div class="form-group mp-margin">
+                                        <div class="">CREATE ACCOUNT USING<span class="text-danger">*</span></div>
+                                        <select class="form-control" id="wk_seller_signup_option" name="wk_seller_signup_option">
+                                            <option value="0" {if !empty($signup_cookie) && $signup_cookie.seller_signup_option == '0'}selected{/if}>Email</option>
+                                            <option value="1" {if !empty($signup_cookie) && $signup_cookie.seller_signup_option == '1'}selected{/if}>Contact Number</option>
+                                        </select>
+                                    </div>
+                                    {else}
+                                    <input type="hidden" name="wk_seller_signup_option" value="{$seller_signup_option|default:0}">
+                                    {/if}
+                                    {if isset($seller_signup_option) && ( $seller_signup_option == 0 || $seller_signup_option == 2 ) }
+                                    <div class="form-group mp-margin wk_seller_signup_option_email">
+                                        <div class="">EMAIL<span class="text-danger">*</span></div>
+                                        <input type="email" class="form-control" id="wk_email" name="wk_email" value="{if !empty($signup_cookie)}{$signup_cookie.email}{/if}">
+                                    </div>
+                                    {/if}
+                                    {if isset($seller_signup_option) && ( $seller_signup_option == 1 || $seller_signup_option == 2 ) }
+                                    <div class="form-group mp-margin wk_seller_signup_option_contact" {if $seller_signup_option == 2 } style="display:none" {/if}>
+                                    <div class="">CONTACT NUMBER<span class="text-danger">*</span></div>
+                                    <input type="number" class="form-control" id="wk_contact" name="wk_contact" value="{if !empty($signup_cookie)}{$signup_cookie.contact}{/if}">
+                                </div>
+                                {/if}
+                                <div class="form-group mp-margin text-capitalize">
+                                    <div class="">PASSWORD<span class="text-danger">*</span></div>
+                                    <input type="password" class="form-control" id="wk_password" name="wk_password">
+                                </div>
+                                <div class="form-group mp-margin text-capitalize">
+                                    <div class="">CONFIRM PASSWORD<span class="text-danger">*</span></div>
+                                    <input type="password" class="form-control" id="wk_cpassword" />
+                                    <p class="text-muted small">Please enter your password again</p>
+                                </div>
+
+                                {if $seller_category_and_tags_active }
+                                {if $allow_seller_to_add_tags && $main_tag_names && !empty($all_seller_tag)}
+                                <div class="form-group mp-margin text-capitalize">
+                                    <div class="">SELLER TAGS {if $mandate_seller_tag_at_signup}<span class="text-danger">*</span>{/if}</div>
+                                    <div class="" id="seller_tag_div">
+                                        <input type="text" maxlength="100" class="form-control seller_tags" name="seller_tags" id="seller_tags" value="{if !empty($signup_cookie)}{$signup_cookie.seller_tags|escape:"htmlall"}{else if $seller_tag_names}{$seller_tag_names|escape:"htmlall"}{/if}" placeholder="Enter Seller Tags Here">
+                                    </div>
+                                </div>
+                                {/if}
+                                {if $allow_seller_to_add_category && !empty($all_collections) && !empty($all_category)}
+                                <div class="form-group mp-margin text-capitalize">
+                                    <div class="">SELECT CATEGORY{if $mandate_seller_category_at_signup}<span class="text-danger">*</span>{/if}</div>
+                                    <div id="category_tree" class="mp-control-overflow mp-margin-bottom-10 max-height-300 pull-left full-width">
+                                    </div>
+                                    <input type="hidden" id="category" name="category[]" value="">
+                                </div>
+                                {/if}
+                                {/if}
+
+                                {if $artist_design_active}
+                                <div class="form-group mp-margin text-capitalize">
+                                    <div class="">JOIN AS<span class="text-danger">*</span></div>
+                                    <select class="form-control" id="wk_user_type" name="wk_user_type">
+                                        {if $join_artist_marketplace == 1}
+                                        <option value="0" {if !empty($signup_cookie) && $signup_cookie.user_type == "0"}selected{/if}>SELLER</option>
+                                        {/if}
+                                        <option value="1" {if !empty($signup_cookie) && $signup_cookie.user_type == "1"}selected{/if}>{$artist_label}</option>
+                                    </select>
+                                </div>
+                                {/if}
+                                {*if $seller_policy_type == 2 && $sptv_value}
+                                {foreach $sptv_value as $value}
+                                <div class="form-group mp-margin text-capitalize">
+                                    <div class=""><span class="fa fa-star mp-theme-color"> </span> {$value.display_name}<span class="mp-margin-left info-btn fa fa-question-circle pointer lg-sz-wt mp-theme-color" tabindex="-1" data-toggle="popover" data-content="{$value.description}."></span></div>
+                                    {if $value.input_type == 1}
+                                    <input type="text" class="form-control" name="seller_policy_arr[{$value.id}]" value="{if !empty($signup_cookie)}{$signup_cookie.seller_policy[{$value.id}]|escape:"html":"UTF-8"}{else if !empty($value.variable_value)}{$value.variable_value|escape:"html":"UTF-8"}{/if}"/>
+                                    {else if $value.input_type == 2}
+                                    <textarea class="form-control" name="seller_policy_arr[{$value.id}]"  rows="5">{if !empty($signup_cookie)}{$signup_cookie.seller_policy[{$value.id}]|escape:"html":"UTF-8"}{else if !empty($value.variable_value)}{$value.variable_value|escape:"html":"UTF-8"}{/if}</textarea>
+                                    {/if}
+                                </div>
+                                {/foreach}
+                                {/if*}
+                                {if !empty($cus_fields) && $cus_fields}
+                                {foreach $cus_fields as $key => $value}
+                                <div class="form-group text-capitalize">
+                                    <div class="">{$value.display_name|upper}{if $value.required}<span class="text-danger">*</span>{/if}</div>
+                                    {if $value.id_custom_input_type == 1}
+                                    <input type="text" class="form-control" id="{$value.input_name|escape:"html":"UTF-8"}" name="{$value.input_name|escape:"html":"UTF-8"}" value="{if !empty($signup_cookie)}{$signup_cookie.custom_fields[$key]["input_name"]}{/if}">
+                                    {else if $value.id_custom_input_type == 2}
+                                    <textarea class="form-control" id="{$value.input_name|escape:"html":"UTF-8"}" name="{$value.input_name|escape:"html":"UTF-8"}" rows="6">{if !empty($signup_cookie)}{$signup_cookie.custom_fields[$key]["input_name"]}{/if}</textarea>
+                                    {else if $value.id_custom_input_type == 6}
+                                    {include file = "seller_dropdown.tpl"}
+                                    {else if $value.id_custom_input_type == 5}
+                                    <button type="button" class="upload_img" id="{$value.input_name}">UPLOAD FILE</button><span class="file_name">{if !empty($id)}{$field_value[$key]|regex_replace:"/https://(.*)//":" "}{/if}</span>
+                                    <br>
+                                    <a class="custom_remove pointer {if empty($field_value[$key])}mp-hidden-div{/if}" id="{$value.id}" data-for="{if !empty($id)}{$field_value[$key]|regex_replace:"/https://(.*)custom_fields/":""}{/if}" data-value="{$id}">Remove File</a>
+                                    <input type="file" class="hidden" name="{$value.input_name}" accept="">
+                                    <input type="hidden" name="check_cust_file[{$value.input_name}]" value="{if !empty($id)}{$field_value[$key]|escape:"html":"UTF-8"}{/if}">
+                                    <div class="row col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                        <p class="mp-margin-bottom-10">File size can't exceed 3 MB.</p>
+                                    </div>
+                                    <div class="row mp-hidden-div col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label class="note">Error : </label>
+                                        <p class="mp-margin-bottom-10">File size too large. Maximun allowed size of File is 3 MB.</p>
+                                    </div>
+                                    {/if}
+                                </div>
+                                {/foreach}
+                                {/if}
+
+
+
+                                {if isset($admin_terms_condition)}
+                                <div class="form-group row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <input type="checkbox" id="term_con_cbx" class="hidden check-option chkbox checkbox wk-inp-cbx" data-side="seller">
+                                        {$cbx_data = ["cbx_for"=>"term_con_cbx", "title"=>"By signup you agree to the
+                                        <a href='{if !empty($tc_link)}{$tc_link}{else}index.php?p=terms_con{/if}' target='_blank' class='wk-theme-color link-style'>terms and conditions </a><i class='text-danger'>*</i>"]}
+                                        {call getAnimatedCheckbox data=$cbx_data}
+                                    </div>
+                                    <input type="hidden" name="term_con" id="term_con" value="0">
+                                </div>
+                                <div class="hidden" id="admin_terms_condition" value="{$admin_terms_condition["active"]}"></div>
+                            {/if}
+
+                            <div class="hidden">
+                                <input type="hidden" name="mplan_id" id="mplan_id">
+                            </div>
+
+                            <div class="mp-error-mini">
+                                <div class="mp-error-mini-msg small text-danger"></div>
+                            </div>
+                        </div>
+                        {if !empty($recaptcha_config) && $recaptcha_config.active == 1 }
+                        <div class="g-recaptcha" data-sitekey="{$recaptcha_config.site_key}"></div>
+                        {/if}
+                        <div class="form-group pull-left">
+                            <button type="submit" class="wk_btn prime-btn text-capitalize signup-btn mp-theme-background {if isset($admin_terms_condition)} disabled-btn{/if}" data-loading-text="<div style='opacity:0.7;'></div>" autocomplete="off" {if isset($admin_terms_condition)}disabled{/if}>{if !empty($customize_details) && $customize_details}{$customize_details.signup_btn_text}{else}{$signup_create_my_account}{/if}</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <input type="hidden" name="_token" value="{$token}"></form>
+</div>
+</div>
+{else}
+<div class="container-fluid mp-margin-top-50">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-left mp-margin-top-30 padding-20">
+            <h1 class="text-uppercase mp-margin-top-50 mp-pad-top">RESTRICTED</h1>
+            <p>The content you are looking for might have been restricted by merchant.<br>
+                Contact your merchant.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center padding-20">
+            <img class="full-max-width" src="img/EmptyTable/Seller-login-signup.png">
+        </div>
+    </div>
+</div>
+{/if}
+</div>
+
+{if isset($admin_terms_condition)}
+<script type="text/javascript">
+    var checkbox_check = true;
+</script>
+{/if}
+
+<script type="text/javascript">
+    var error = notice = false;
+    {if $error == 1}
+    error = "Email already exist";
+    {else if $error == 2}
+    error = "All fields are mandatory";
+    {else if $error == 3}
+    error = "Required fields cannot be blank";
+    {else if $error == 4}
+    error = "Enter correct email";
+    {else if $error == 5}
+    error = "Password is too small";
+    {else if $error == 6}
+    error = "You have to accept the terms and conditions";
+    {else if $error == 7}
+    error = {$signup_default_shopname}
+    {else if $error == 8}
+    error = "Invalid seller name";
+    {else if $error == 9}
+    error = "Form contains invalid key";
+    {else if $error == 10}
+    error = "Something went wrong";
+    {else if $error == 11}
+    error = "Invalid Tag";
+    {else if $error == 12}
+    error = "Invalid recaptcha validation";
+    {else if $error == 13}
+    error = "Invalid seller shop name";
+    {else if $error == 14}
+    error = "Invalid CSRF token";
+    {else if $error == 15}
+    error = "Please uncheck seller sign-on for the {$shop_name_sso_error} store because the email seller already exists in this store.";
+    {else if $error == 16}
+    error = "Contact Number already exist";
+    {else if $error == 17}
+    error = "Invalid Contact Number";
+    {else if $error == 18}
+    error = "Minimum 8 digit required for Contact Number";
+    {else if $error == 19}
+    error = "Enter valid Refferal Code"
+    {else if $error == 20}
+    error = "Oops! Rate limit exceeded. Please wait for {$waitInMinutes} minutes before trying again."
+    {/if}
+
+
+        var signup_err_all_field_mand = "{$signup_err_all_field_mand}";
+        var signup_err_name_mand = "{$signup_err_name_mand}";
+        var signup_err_email_mand = "{$signup_err_email_mand}";
+        var err_email_like = "{$err_email_like}";
+        var signup_err_pass_mand = "{$signup_err_pass_mand}";
+        var signup_err_pass_length = "{$signup_err_pass_length}";
+        var signup_err_pass_cpass_not_match = "{$signup_err_pass_cpass_not_match}";
+        var signup_err_checkbox_mand = "{$signup__accept_trm_con_continue}";
+        var signup_err_pass_balnk_not_allow = "{$signup__blank_space_not_allow}";
+        var signup_err_seller_name = "Seller name cannot be blank";
+        var signup_err_seller_store_name = "Seller shop cannot be blank";
+        var signup_err_email = "Email cannot be blank";
+        var signup_err_contact = "Contact number cannot be blank";
+        var signup_err_pwd = "Password cannot be blank";
+        var signup_err_cpwd = "Confirm Password cannot be blank";
+        var signup_err_pwd_not_match = "Password and Confirm Password doesn't matched";
+        var signup_err_email_not_valid = "Email not valid";
+        var signup_err_accept_tnc = "Please accept Terms and Conditions";
+
+        var mp_active = '{$mp_active}';
+        var seller_membership_new = "{$seller_membership_new|default:false}";
+        var disp_mplan = '{$disp_mplan}';
+        var p_value = '{$p_value}';
+        {if !empty($main_tag_names)}
+        var main_tag_names = {$main_tag_names};
+        {/if}
+            var array_coll = {$all_collections|default:0};
+            var res_category = 1;
+            var multi_level_coll = 1;
+            var selected_colls = false;
+            var allow_seller_to_add_shop_name = {$allow_seller_to_add_shop_name|default:0};
+</script>

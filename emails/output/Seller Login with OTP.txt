@@ -1,0 +1,14 @@
+OGGETTO: OTP per accesso venditore
+---
+Gentile {$username}
+
+La Sua Password Monouso (OTP) per accedere al Suo account è {$otp_code}.
+
+La preghiamo di non condividere questo codice con nessuno.
+
+Questa OTP è valida solo per 10 minuti.
+
+Se non ha richiesto questo accesso, ignori questa email.
+
+Cordiali saluti,
+{$shop}

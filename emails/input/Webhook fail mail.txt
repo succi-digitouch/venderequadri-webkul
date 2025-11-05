@@ -1,0 +1,25 @@
+SUBJECT: Your Webhook is failing
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello user,</h3>
+<p>This is to inform you that the following webhook is not returning 200 OK response.</p>
+<p>Your webhook for {$topic} at {$webhook_url} is failing to return a successful delivery response.</p>
+<p>Till now, this webhook has been attempted {$total_attempt} times. In case, your webhook continues to fail, it will be removed and your application will no longer receive further notifications.</p>
+<hr />
+<p>{if !empty($failed_webhook)}</p>
+<h3>Recent failures:</h3>
+<p>{foreach $failed_webhook as $value}</p>
+<p>Timestamp in UTC: {$value.timestamp}</p>
+<p>Error: {$value.error}</p>
+<p>Store: {$shop}</p>
+<p>{/foreach} {/if}</p>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Multivendor API team</h3>
+</div>
+---
+VARIABLES
+{$shop}-Shop Name
+{$topic}-Webhook topic
+{$webhook_url}-Webhook url
+{$total_attempt}-Webhook attempt count
+{$failed_webhook}-Failed webhook data

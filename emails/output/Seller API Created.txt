@@ -1,0 +1,10 @@
+OGGETTO: Nuove credenziali generate
+---
+Gentile {$seller_name}
+
+Le Sue credenziali API sono state generate/aggiornate.
+
+Accedi per visualizzare i dettagli: {$public_url}
+
+Cordiali saluti
+{$shop}

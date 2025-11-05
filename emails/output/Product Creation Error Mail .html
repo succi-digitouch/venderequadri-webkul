@@ -1,0 +1,10 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile Utente</h3>
+<p>Errore nella creazione del prodotto # {$product_id}</p>
+<p>Si è verificato un errore, la preghiamo di riprovare più tardi</p>
+{if $error_message}
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Dettagli Errore:</h3>
+{$error_message} {/if}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop|default:"admin"}</h3>
+</div>

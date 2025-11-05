@@ -1,0 +1,12 @@
+OGGETTO: I Suoi link per il download
+---
+Gentile {$customer_name}
+
+La ringraziamo per il Suo acquisto.
+
+Di seguito trova il link per il download.
+
+{$download_links}
+
+Cordiali saluti
+{$shop}

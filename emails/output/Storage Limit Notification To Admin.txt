@@ -1,0 +1,8 @@
+OGGETTO: Notifica limite spazio di archiviazione
+---
+Gentile Admin,
+
+Desideriamo informarLa che l'utilizzo dello spazio di archiviazione ha raggiunto una soglia critica. Ora ha solo {$remaining_space} MB di spazio rimanente nel Suo account.
+
+Cordiali saluti,
+{$shop}

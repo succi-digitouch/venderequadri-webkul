@@ -1,0 +1,26 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile <span style="color: #2a5b8b;">{$customer_name}</span></h3>
+<p>Speriamo che sia entusiasta del Suo ordine da <strong>{$seller_store_name}</strong>.</p>
+<p>La preghiamo di fornire il Suo prezioso feedback per il venditore <a href="{$url}" target="_blank" rel="noopener noreferrer">Cliccando Qui</a></p>
+{if !empty($order_prod_details) && $order_prod_details}
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px; word-break: break-word;">
+<tbody>
+<tr>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">ID Ordine</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Nome Prodotto</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Variante</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Quantità</th>
+</tr>
+</tbody>
+<tbody><!-- {foreach $order_prod_details.line_items as $order_prod_detail} -->
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">#{$order_prod_detail["order_id"]}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$order_prod_detail["product_name"]}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$order_prod_detail["variant_title"]}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$order_prod_detail["total_quantity"]}</td>
+</tr>
+<!-- {/foreach} --></tbody>
+</table>
+{/if}
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>

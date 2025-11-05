@@ -1,0 +1,67 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>La informiamo che è stato effettuato un ordine.</p>
+<p>La preghiamo di accedere al Suo account venditore per evadere i prodotti dell'ordine.</p>
+<p><strong>Dettagli Ordine</strong></p>
+{if !empty($product_details) && $product_details}
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px; word-break: break-word;">
+<thead>
+<tr>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">ID Ordine</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Nome Ordine</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Immagine Prodotto</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Nome Prodotto</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">SKU</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{if $disp_sales_price}Prezzo Scontato{else}Prezzo{/if}</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">QTÀ</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Sconto</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Subtotale</th>
+</tr>
+</thead>
+<tbody><!--{foreach $product_details as $key => $value}-->
+<tr><!--{if $key == 0}-->
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;" rowspan="{$count}">#{$oid}</td>
+<!--{/if}--> <!--{if $key == 0}-->
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;" rowspan="{$count}">{$order_name}</td>
+<!--{/if}-->
+<td width="60" style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$img_url}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">
+<p>{$value.product_name|escape:"htmlall"}</p>
+{if !empty($value.product_properties)} {foreach $value.product_properties as $property_key => $property_value} <span> {$property_value.property_name}: {$property_value.property_value}<br /> </span> {/foreach} {/if}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$value.sku|default:' '}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$currency_symbol}{$value.price}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$value.quantity}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$value.line_discount}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$currency_symbol}{$sub_total[$key]}</td>
+</tr>
+<!--{foreachelse}
+		<p>Nessun Prodotto.</p>
+	{/foreach}-->
+<tr style="text-align: right;">
+<td colspan="9" style="font-weight: 400; border: 1px solid #73b9b8; padding: 20px 25px !important; text-align: right;">
+<p>Totale Ordine - <span style="padding-left: 10px !important;">{$currency_symbol}{$order_total}</span></p>
+<p>Stato Pagamento - <span style="padding-left: 10px !important;">{$payment_status}</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+{if isset($subscription_plan_sent_mail) && $subscription_plan_sent_mail == true}
+<p>Questo ordine contiene un prodotto in abbonamento. - <a href="{$subscription_url}" target="_blank" rel="noopener noreferrer">visualizza contratto</a></p>
+{/if} {/if} {if !empty($booking_details)}
+<p>Dettagli Prenotazione -</p>
+{foreach $booking_details as $key => $booking}
+<div style="margin-bottom: 10px;">
+<p><strong>{$booking_product_name[$key]}</strong></p>
+<p>Da: {$booking.from}</p>
+<p>A: {$booking.to}</p>
+<p>Fuso orario: {$booking.timezone}</p>
+<p>Data slot: {$booking.slot_date}</p>
+<p>Ospite: {$booking.guest}</p>
+</div>
+{/foreach} {/if}
+<p>Spedizione Venditore - {$currency}{$seller_shipping}</p>
+<p>Questo/i prodotto/i sarà/anno spedito/i al seguente indirizzo -</p>
+{$shipping_address}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>

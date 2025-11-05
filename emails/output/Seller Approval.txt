@@ -1,0 +1,10 @@
+OGGETTO: Venditore approvato
+---
+Gentile {$seller_name}
+
+La informiamo che il Suo account è ora attivo.
+
+Ora può accedere ai Suoi prodotti e ordini.
+
+Cordiali saluti
+{$shop}

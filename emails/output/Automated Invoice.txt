@@ -1,0 +1,11 @@
+OGGETTO: Fattura Automatica Generata
+---
+Gentile {$seller_name}
+
+È stata generata una fattura automatica per gli ordini compresi tra {$from_date} e {$to_date}.
+
+Clicca sul link per scaricare la fattura:
+{$seller_url}
+
+Cordiali saluti
+{$shop}

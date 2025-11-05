@@ -1,0 +1,13 @@
+SUBJECT: Merchant has Logged in Your Seller Panel
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 0.5em 0; font-size: 15px; font-weight: 600; padding: 0;">Hello <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>This is to inform you that the admin has logged into your seller panel. In case of any issue, you can directly contact the merchant.</p>
+<p>Thanks &amp; Regards,</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name

@@ -1,0 +1,13 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">Gentile <span style="color: #2a5b8b;">{$shop|default:"admin"}</span></h3>
+<p>La informiamo che un nuovo venditore si è registrato al Suo sito.</p>
+<p>Nome Venditore: {$seller_name}</p>
+<p>Email Venditore: {$seller_email}</p>
+<p>ID Venditore: {$seller_id}</p>
+<p><b>Informazioni Aggiuntive::</b></p>
+{if !empty($custom_field)}{foreach $custom_field as $value}
+<p>{$value['display_name']}: {$value['input_name']}</p>
+{/foreach}{/if}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">Multi Vendor Marketplace</h3>
+</div>

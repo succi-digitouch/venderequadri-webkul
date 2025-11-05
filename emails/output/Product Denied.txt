@@ -1,0 +1,14 @@
+OGGETTO: Prodotto rifiutato
+---
+Gentile {$seller_name}
+
+La informiamo che il prodotto (#{$pid}) è stato rifiutato ed eliminato.
+
+Motivo del rifiuto di questo prodotto:
+{$deny_reason}
+
+Dettagli prodotto:
+{$product_details}
+
+Cordiali saluti
+{$shop}

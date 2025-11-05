@@ -1,0 +1,10 @@
+OGGETTO: Dettagli aggiornati
+---
+Gentile {$seller_name}
+
+I dettagli del Suo account sono stati aggiornati.
+
+{$seller_details}
+
+Cordiali saluti
+{$shop}

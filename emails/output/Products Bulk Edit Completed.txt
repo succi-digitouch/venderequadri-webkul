@@ -1,0 +1,12 @@
+OGGETTO: Modifica massiva prodotti completata
+---
+Gentile Venditore
+
+La informiamo che i prodotti sono stati aggiornati con successo tramite Modifica Massiva CSV.
+
+Controlli i Suoi Prodotti.
+
+Nota: Alcuni prezzi dei prodotti potrebbero non essere stati aggiornati perché il prezzo non può essere inferiore alla commissione.
+
+Cordiali saluti
+{$shop}

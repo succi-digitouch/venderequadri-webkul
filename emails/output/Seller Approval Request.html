@@ -1,0 +1,23 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile <span style="color: #2a5b8b;">{$shop|default:"admin"}</span></h3>
+<p>La informo che il mio account è inattivo.</p>
+<p>La prego di attivare il mio account affinché possa gestire le mie vendite.</p>
+{if !empty($seller_detail) && $seller_detail}
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px;">
+<tbody>
+<tr style="text-transform: capitalize;">
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Nome Venditore</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Email Venditore</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Stato</th>
+</tr>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$seller_detail.seller_name|escape:"htmlall"}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$seller_detail.email}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{if ({$seller_detail.active} == 1)} Attivo {else} Inattivo {/if}</td>
+</tr>
+</tbody>
+</table>
+{/if}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$seller_name|default:"seller"}</h3>
+</div>

@@ -1,0 +1,13 @@
+OGGETTO: Dettagli venditore aggiornati
+---
+Gentile {$shop}
+
+La informiamo che i dettagli di un venditore sono stati aggiornati.
+
+ID Venditore: {$seller_id}
+
+Informazioni Aggiuntive:
+{$value['display_name']}: {$value['input_name']}
+
+Cordiali saluti
+{$shop}

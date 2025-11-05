@@ -1,0 +1,11 @@
+OGGETTO: Prodotti disabilitati automaticamente
+---
+Gentile {$seller_name}
+
+La informiamo che i seguenti prodotti sono stati disabilitati.
+
+ID Prodotto | Nome Prodotto
+{$product.sp_id_product} | {$product.product_name}
+
+Cordiali saluti
+{$shop}

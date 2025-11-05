@@ -1,0 +1,20 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile <span style="color: #2a5b8b;">{$customer_name}</span></h3>
+<p>La informiamo che i seguenti articoli sono stati evasi e sono ora in spedizione.</p>
+{$fulfilled_items_details}
+<p><mark>{if $tracking given}</mark></p>
+<p>Può tracciare i Suoi articoli.</p>
+<p>Numero di tracciamento: {$tracking}</p>
+<p><mark>{if $shipping_method given}</mark></p>
+<p>Metodo di spedizione: {$shipping_method}</p>
+<p><mark>{/if}</mark></p>
+<p><mark>{/if}</mark></p>
+<p><mark>{if $store_name given}</mark></p>
+<p>Nome Negozio: {$store_name}</p>
+<p><mark>{/if}</mark></p>
+<p><mark>{if $seller_name given}</mark></p>
+<p>Nome Venditore: {$seller_name}</p>
+<p><mark>{/if}</mark></p>
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>

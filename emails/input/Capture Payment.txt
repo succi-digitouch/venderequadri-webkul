@@ -1,0 +1,18 @@
+SUBJECT: Payment Captured
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">Hello <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>Your order payment (order no. #{$oid}) has been captured successfully.</p>
+<p>Now you can fulfill and deliver the order products.</p>
+{$capture_order_details}
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$oid}-Order ID
+{$capture_order_details}-Details of order captured
+{$order_note}-Order note

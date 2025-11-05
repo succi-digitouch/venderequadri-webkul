@@ -1,0 +1,35 @@
+SUBJECT: Fulfill your orders
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>This is to remind you that you have not yet fulfilled your orders.</p>
+<p>Kindly check and fulfill your orders as soon as possible.</p>
+{if !empty($orders_summary)}{foreach $orders_summary as $key =&gt; $order}{/foreach}
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px;">
+<tbody>
+<tr>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Order ID</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Customer</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Payment Status</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Fulfillment Status</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Order Total</th>
+</tr>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$order.id}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$order.customer|escape:"htmlall"}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$order.payment_status}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$order.fulfillment}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$currency_symbol}{$order.total_price}</td>
+</tr>
+</tbody>
+</table>
+{/if}
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$orders_summary}-Order Summary

@@ -1,0 +1,11 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">Gentile <span style="color: #2a5b8b;">{$shop|default:"admin"}</span></h3>
+<p>La informiamo che i dettagli di un venditore sono stati aggiornati.</p>
+<p>ID Venditore: {$seller_id}</p>
+<p><b>Informazioni Aggiuntive::</b></p>
+{foreach $custom_field as $value}
+<p>{$value['display_name']}: {$value['input_name']}</p>
+{/foreach}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">{$shop}</h3>
+</div>

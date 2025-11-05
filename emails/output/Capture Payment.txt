@@ -1,0 +1,12 @@
+OGGETTO: Pagamento Acquisito
+---
+Gentile {$seller_name}
+
+Il pagamento del Suo ordine (ordine n. #{$oid}) è stato acquisito con successo.
+
+Ora può evadere e consegnare i prodotti dell'ordine.
+
+{$capture_order_details}
+
+Cordiali saluti
+{$shop}

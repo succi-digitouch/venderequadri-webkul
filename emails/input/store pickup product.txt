@@ -1,0 +1,35 @@
+SUBJECT: Store Pickup Product
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$customer_name}</span></h3>
+<p>Thank you for your purchase.</p>
+<p>Your Store pickup Products Details.</p>
+{foreach $store_pickup_products as $product}{/foreach}
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px;">
+<thead>
+<tr style="text-transform: capitalize;">
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Product Name</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Product Pickup Address</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">On Map</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Proposed Pickup Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-transform: capitalize; text-align: center;">{$product.product_name}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{$product.product_address}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;"><a href="https://www.google.com/maps/search/{$product.product_address}">Click here</a></td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{if isset($product.shipping_date)}{$product.shipping_date}{else}-{/if}</td>
+</tr>
+</tbody>
+</table>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$order_name}-Shopify Order Name or Shopify Order Number
+{$seller_contact}-Seller Contant

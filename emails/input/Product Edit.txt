@@ -1,0 +1,18 @@
+SUBJECT: Product Modified
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hi,</h3>
+<p>Your seller <span style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; color: #2a5b8b;">{$seller_name}</span> has made changes and edited the below given product.</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">#{$pid} - {$product_name}</h3>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">{$seller_store_name}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$seller_store_name}-Seller Store Name
+{$pid}-Product ID
+{$product_name}-Product Name
+{$list_of_modified_fields}-List Of Modified Fields

@@ -1,0 +1,8 @@
+OGGETTO: Pagamento ricevuto
+---
+Gentile {$seller_name}
+
+La informiamo che Le è stato pagato un importo di {$amount}.
+
+Cordiali saluti
+{$shop}

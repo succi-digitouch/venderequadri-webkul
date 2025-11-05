@@ -1,0 +1,10 @@
+OGGETTO: Prodotto disapprovato dal venditore
+---
+Gentile Admin,
+
+Il Suo venditore {$seller_name} ha disapprovato il prodotto.
+
+#{$pid} - {$product_name}
+
+Cordiali saluti
+{$seller_store_name}

@@ -1,0 +1,16 @@
+OGGETTO: Errore sincronizzazione ordini connector
+---
+Gentile {$store_owner_name},
+
+I seguenti ordini non sono stati sincronizzati con il negozio connector del rispettivo venditore. La preghiamo di sincronizzarli manualmente.
+
+Possibili motivi per cui l'ordine non si è sincronizzato:
+1. Potrebbe aver abilitato l'impostazione "sincronizzazione su ordine pagato".
+2. La disponibilità del prodotto ordinato potrebbe essere zero nel negozio connector del venditore.
+3. Potrebbero mancare i dati di fatturazione o spedizione dall'ordine.
+
+ID Ordini | Nome Venditore | Nome Connector
+{$order_ids} | {$seller_name} | {$connector_name}
+
+Cordiali saluti
+{$MVM}

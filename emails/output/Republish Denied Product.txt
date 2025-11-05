@@ -1,0 +1,10 @@
+OGGETTO: Richiesta ripubblicazione prodotto rifiutato
+---
+Gentile {$shop}
+
+La informiamo che il venditore ha richiesto di ripubblicare il prodotto rifiutato (#{$product_details['id']}).
+
+{$product_details}
+
+Cordiali saluti
+{$seller_name}

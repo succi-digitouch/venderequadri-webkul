@@ -1,0 +1,8 @@
+OGGETTO: Accesso dell'Amministratore al Pannello Venditore
+---
+Gentile {$seller_name}
+
+La informiamo che l'amministratore ha effettuato l'accesso al Suo pannello venditore. In caso di problemi, può contattare direttamente il merchant.
+
+Cordiali saluti,
+{$shop}

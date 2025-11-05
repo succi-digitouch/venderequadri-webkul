@@ -1,0 +1,20 @@
+SUBJECT: New Comment added to RMA
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>This is to inform you that a new comment is added by {$first_name} {$last_name} to RMA Request for order #{$oid} .</p>
+<p>Comment : {$comment}</p>
+<p>Login to your account to get more details.</p>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$oid}-Order Id
+{$order_name}-Shopify Order Name
+{$first_name}-Customer first name
+{$last_name}-Customer Second name
+{$comment}-Comment by customer

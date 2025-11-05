@@ -1,0 +1,14 @@
+OGGETTO: Prodotti Programmati per Disabilitazione Automatica
+---
+Gentile Admin
+
+I seguenti prodotti sono programmati per essere disabilitati tra {$notify_days} giorni:
+
+ID Prodotto | Nome Prodotto
+{$product.sp_id_product} | {$product.product_name}
+
+Nome Venditore: {$seller_name}
+Nome Negozio: {$seller_store_name}
+
+Cordiali saluti
+{$shop}

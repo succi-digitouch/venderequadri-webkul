@@ -1,0 +1,11 @@
+OGGETTO: Prodotto riapprovato
+---
+Gentile {$seller_name}
+
+Il Suo prodotto è stato riapprovato.
+
+Dettagli prodotto:
+{$product_details}
+
+Cordiali saluti
+{$shop}

@@ -1,0 +1,203 @@
+
+<div class="modal fade" id="forgot_password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-capitalize" id="myModalLabel">Forgot Password ?</h3>
+                <p class="def-font">Your new password will be sent to registered email</p>
+            </div>
+            <form role="form" id="forgot_password_form" action="index.php?p=forgot_password_process" method="post">
+                <input type="hidden" name="csrf_token" value="{if isset($csrf_token)}{$csrf_token}{/if}">
+                <div class="modal-body" id="myModalBody">
+                    <div class="form-group">
+                        <label class="control-label"><span class="fa fa-envelope"> </span>&nbsp Email <span class="text-danger">*</span></label>
+                        <input type="Email" class="form-control input-lg" id="seller_email" name="seller_email" autofocus required>
+                        <input type="hidden" name="sid" value="{$sid}">
+                    </div>
+
+                    {if $staff_active}
+                    <div class="form-group">
+                        <label class="control-label"><span class="fa fa-user"> </span> ACCOUNT TYPE <span class="text-danger">*</span></label>
+                        <select class="form-control text-capitalize" name="wk_account_type" id="wk_account_type">
+                            <option value="0" selected>Seller</option>
+                            <option value="1">Staff</option>
+                        </select>
+                    </div>
+                    {/if}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="gap btn btn-primary pull-left mp-theme-background">Reset</button>
+                    {if !$restrict_seller_signup}
+                    <p class="def-font">Don't have an account yet ?
+                        <a href="index.php?p=signup" class="btn-link">Sign up</a>
+                        Now !</p>
+                    {/if}
+                </div>
+                <input type="hidden" name="_token" value="{$token}">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="margin-top-150 hidden-sm hidden-xs"></div>
+    <div class="mp-margin-top-50 mp-pad-top hidden-lg hidden-md"></div>
+    <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+        <div id="" class="col-lg-5 col-md-5">
+            <div id="left_column">
+                {if !empty($customize_details) && $customize_details}
+                {$customize_details.login_welcome_text}
+                {else}
+                <h1>Welcome Seller</h1>
+                <table id="feature_list">
+                    <tr>
+                        <td><span class="fa fa-user-plus">&nbsp;</span></td>
+                        <td>You can join {$shop}
+                            as seller</td>
+                    </tr>
+                    <tr>
+                        <td><span class="fa fa-tags">&nbsp;</span></td>
+                        <td>Sell your products from shop</td>
+                    </tr>
+                    <tr>
+                        <td><span class="fa fa-users">&nbsp;</span></td>
+                        <td>Get more audience</td>
+                    </tr>
+                </table>
+                {/if}
+                {if !$restrict_seller_signup}
+                <div class="row mp-margin-top-20">
+                    <div class="col-md-5 text-center">
+                        <a href="index.php?p=signup" class="wk_btn prime-btn mp-theme-background text-capitalize font-size-18">{if !empty($customize_details) && $customize_details}{$customize_details.joinnow_btn_text|escape:"html":"UTF-8"}{else}{$login_join_now|escape:"html":"UTF-8"}{/if}</a>
+                    </div>
+                </div>
+                {/if}
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 marg-top-inverse-40">
+            {if !empty($icon_name)}
+            <div id="customized_icon" class="icon-div"><img src="{$icon_name}"></div>
+            {else}
+            <div class="icon-div">
+                <img src="img/Logo/Seller-Login-Icon.png">
+            </div>
+            {/if}
+
+            <div id="right_column">
+                <div class="card add_card mp-form-bg-color">
+                    <h4 class="text-center text-uppercase mp-margin-top-50">{$login_labels.lbl_seller_login.label_value|escape:"html":"UTF-8"}</h4>
+                    <p>{$login_labels.lbl_login_statement.label_value|escape:"html":"UTF-8"}</p>
+                    <form id="login_form" role="form" action="index.php?p=login_process&sid={$sid}" method="post">
+                        <input type="hidden" name="csrf_token" value="{if isset($csrf_token)}{$csrf_token}{/if}">
+                        {if isset($seller_signup_option) && $seller_signup_option == 2}
+                        <div class="form-group mp-margin">
+                            <div class="">CREATE ACCOUNT USING<span class="text-danger">*</span></div>
+                            <select class="form-control" id="wk_seller_signup_option" name="wk_seller_signup_option">
+                                <option value="0" {if !empty($login_cookie) && $login_cookie.seller_signup_option == "0"}selected{/if}>Email</option>
+                                <option value="1" {if !empty($login_cookie) && $login_cookie.seller_signup_option == "1"}selected{/if}>Contact Number</option>
+                            </select>
+                        </div>
+                        {else}
+                        <input type="hidden" name="wk_seller_signup_option" value="{$seller_signup_option|default:0}">
+                        {/if}
+                        {if isset($seller_signup_option) && ( $seller_signup_option == 0 || $seller_signup_option == 2 ) }
+                        <div class="form-group mp-margin-top-20 wk_seller_signup_option_email">
+                            <div class="text-capitalize"><span class="fa fa-envelope"> </span> {$login_labels.lbl_email_addr.label_value|escape:"html":"UTF-8"|upper}&nbsp<span class="text-danger">*</span></div>
+                            <input type="email" class="form-control" id="wk_email" name="wk_email" required autofocus>
+                        </div>
+                        {/if}
+                        {if isset($seller_signup_option) && ( $seller_signup_option == 1 || $seller_signup_option == 2 ) }
+                        <div class="form-group mp-margin-top-20 wk_seller_signup_option_contact" {if $seller_signup_option == 2} style="display: none;" {/if}>
+                        <div class="text-capitalize"><span class="fa fa-phone"> </span> {$login_labels.lbl_contact_number_addr.label_value|escape:"html":"UTF-8"|upper}&nbsp<span class="text-danger">*</span></div>
+                        <input type="number" class="form-control" id="wk_contact" name="wk_contact" autofocus>
+                </div>
+                {/if}
+                <div class="form-group mp-margin-top-20">
+                    <div class="text-capitalize"><span class="fa fa-lock"> </span> {$login_labels.lbl_password.label_value|escape:"html":"UTF-8"|upper}&nbsp<span class="text-danger">*</span></div>
+                    <input type="password" class="form-control" id="wk_password" name="wk_password" required>
+                </div>
+                <input type="hidden" name="redirect_url" value="{$redirect_url|default:""}">
+                {if $staff_active}
+                <div class="form-group mp-margin-top-20">
+                    <div class="text-capitalize"><span class="fa fa-user"> </span> ACCOUNT TYPE&nbsp<span class="text-danger">*</span></div>
+                    <select class="form-control text-capitalize" name="wk_account_type" id="wk_account_type">
+                        <option value="0">Seller</option>
+                        <option value="1">Staff</option>
+                    </select>
+                </div>
+                {/if}
+                <div class="row">
+                    <div class="col-md-7 col-sm-7 col-xs-8">
+                        <p><a class="link-style pointer" href="#" data-toggle="modal" data-target="#forgot_password"> {$login_labels.lbl_forgot_password.label_value|escape:"html":"UTF-8"} </a></p>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-4 text-right">
+                        <span class="text-danger">*{$login_labels.lbl_req_fields.label_value|escape:"html":"UTF-8"}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mp-pad-top text-center">
+                        <button type="submit" class="wk_btn prime-btn mp-no-float mp-theme-background text-capitalize font-size-18" name="wk_login_submit" data-loading-text="Loading..." autocomplete="off">{if !empty($customize_details) && $customize_details}{$customize_details.login_btn_text|escape:"html":"UTF-8"}{else}{$login_login_account|lower|escape:"html":"UTF-8"}{/if}</button>
+                    </div>
+                </div>
+                <input type="hidden" name="_token" value="{$token}"></form>
+                {if !$restrict_seller_signup }
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">{$login_labels.lbl_not_seller_yet.label_value|escape:"html":"UTF-8"} <a href="index.php?p=signup" class= "text-capitalize link-style">{if !empty($customize_details) && $customize_details}{$customize_details.joinnow_btn_text|escape:"html":"UTF-8"}{else}{$login_join_now|escape:"html":"UTF-8"}{/if}</a></div>
+                </div>
+                {/if}
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+</div>
+</div>
+
+<script>
+    var error = false;
+    var notice = false;
+
+    {if $error == 1}
+    error = "Invalid Email Address"
+    {else if $error == 2}
+    error = "Incorrect email or password"
+    {else if $error == 3}
+    error = "Incorrect email or password"
+    {else if $error == 4}
+    error = "Something went wrong while sending mail, try again."
+    {else if $error == 5}
+    error = "Incorrect email or password"
+    {else if $error == 6}
+    error = "Invalid Token"
+    {else if $error == 7}
+    error = "Waiting for approval, Please contact with Admin "
+    {else if $error == 8}
+    error = "Invalid Contact Number"
+    {else if $error == 9}
+    error = "Incorrect Contact Number or password"
+    {else if $error == 10}
+    error = "Minimum 8 digit required for Contact Number"
+    {else if $error == 11}
+    error = "Invalid Facebook with login credentials"
+    {else if $error == 12}
+    error = "Invalid Gmail with login credentials"
+    {else if $error == 14}
+    error = "Invalid CSRF token"
+    {/if}
+
+        {if $notice == 1}
+        notice = "Successfully Logged out"
+        {else if $notice == 2}
+        notice = "Incorrect email or password"
+        {else if $notice == 3}
+        notice = "Email Sent Successfully"
+        {else if $notice == 4}
+        notice = "Something went wrong while sending mail, try again."
+        {else if $notice == 7}
+        notice = "Waiting for Approval, please contact with Admin."
+        {else if $notice == 8}
+        notice = "Password changed successfully"
+        {/if}
+
+</script>

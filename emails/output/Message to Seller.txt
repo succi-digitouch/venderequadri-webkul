@@ -1,0 +1,8 @@
+OGGETTO: Informazione
+---
+Gentile {$seller_name}
+
+{$seller_message}
+
+Cordiali saluti
+{$shop}

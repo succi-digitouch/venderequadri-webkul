@@ -1,0 +1,12 @@
+SUBJECT: Product Export CSV
+---
+<div style="font-size: 15px; line-height: 20px;">
+<p>Hello</p>
+<p>As you have requested for product's data of the app on your store, we are providing you the details in the attached CSV file. Kindly, find the attachment regarding the same. In case of any query, kindly revert to this email.</p>
+<p>Thanks &amp; Regards</p>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name

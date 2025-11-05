@@ -1,0 +1,8 @@
+OGGETTO: Ordine contrassegnato come sicuro
+---
+Gentile {$seller_name},
+
+L'ordine ID {$oid} è stato contrassegnato come sicuro dall'amministratore. Può procedere ora con l'evasione.
+
+Cordiali saluti
+{$shop}

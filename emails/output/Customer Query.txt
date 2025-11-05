@@ -1,0 +1,12 @@
+OGGETTO: Richiesta cliente
+---
+Gentile {$seller_name}
+
+La informiamo che un cliente ({$customer_name}) ha inviato una richiesta per {$seller_store}.
+
+Email: {$customer_email}
+Richiesta: {$customer_query}
+Contatto: {$customer_contact}
+
+Cordiali saluti
+{$shop}

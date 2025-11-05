@@ -1,0 +1,10 @@
+OGGETTO: Ordine pronto per il ritiro
+---
+Gentile {$shop}
+
+La informiamo che l'ordine {$oid} è pronto.
+
+La preghiamo di ritirare l'ordine.
+
+Cordiali saluti
+{$seller_name}

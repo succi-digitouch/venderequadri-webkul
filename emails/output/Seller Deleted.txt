@@ -1,0 +1,13 @@
+OGGETTO: Venditore eliminato
+---
+Gentile {$shop}
+
+La informiamo che un venditore è stato eliminato.
+
+ID Venditore: {$seller_id}
+Nome Negozio: {$store_name}
+Nome Venditore: {$seller_name}
+Email Venditore: {$seller_email}
+
+Cordiali saluti
+{$shop}

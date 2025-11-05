@@ -1,0 +1,11 @@
+OGGETTO: Avviso imminente disabilitazione prodotto
+---
+Gentile {$seller_name}
+
+I seguenti prodotti del Suo negozio saranno disabilitati tra {$notify_days} giorni:
+
+ID Prodotto | Nome Prodotto
+{$product.sp_id_product} | {$product.product_name}
+
+Cordiali saluti
+{$shop}

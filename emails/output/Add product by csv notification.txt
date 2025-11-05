@@ -1,0 +1,11 @@
+OGGETTO: Notifica aggiunta prodotti tramite CSV
+
+---
+
+Gentile Admin
+
+La informiamo che il venditore {$seller_name} ha aggiunto prodotti tramite CSV.
+
+Cordiali saluti
+
+{$shop}

@@ -1,0 +1,13 @@
+OGGETTO: Ordine rifiutato dal venditore
+---
+Gentile {$customer_name}
+
+La informiamo che i seguenti articoli del Suo ordine numero {$order_name} sono stati rifiutati dal nostro venditore.
+
+Motivo: {$order_reject_reason}
+
+Nome Prodotto | QTÀ Ordinata | QTÀ Annullata
+{$product_name} | {$quantity[$key]} | {$cancel_quantity[$key]}
+
+Cordiali saluti
+{$shop}

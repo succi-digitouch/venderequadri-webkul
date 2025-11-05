@@ -1,0 +1,13 @@
+OGGETTO: Articoli consegnati
+---
+Gentile {$customer_name}
+
+La informiamo che i seguenti articoli Le sono stati consegnati con successo in data {$deliver_date}.
+
+Articoli consegnati:
+{$delivered_items_details}
+
+La ringraziamo per aver utilizzato il nostro servizio.
+
+Cordiali saluti
+{$shop}

@@ -1,0 +1,10 @@
+OGGETTO: Richiesta feedback venditore
+---
+Gentile {$customer_name}
+
+Speriamo che sia entusiasta del Suo ordine da {$seller_store_name}.
+
+La preghiamo di fornire il Suo prezioso feedback per il venditore cliccando sul link: {$url}
+
+Cordiali saluti
+{$shop}

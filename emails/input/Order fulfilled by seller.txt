@@ -1,0 +1,53 @@
+SUBJECT: Order Fulfilled by seller
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$shop|default:"Admin"}</span></h3>
+<p>This is to inform you that the seller has fulfilled products of order (#{$oid}).</p>
+{if !empty($item_names) &amp;&amp; $item_names}
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px;">
+<thead>
+<tr style="text-transform: capitalize;">
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Order ID</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Shopify Store Order ID</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Product Name</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">{if $disp_sales_price}Sales Price{else}Price{/if}</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">QTY</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Sub Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">#{$oid}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">#{$store_order_id}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$value.product_name}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$currency_symbol}{$value.price}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$quantity[$key]}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$currency_symbol}{$sub_total[$key]}</td>
+</tr>
+</tbody>
+<tfoot>
+<tr style="text-align: right;">
+<td colspan="5" style="font-weight: 400; border: 1px solid #73b9b8; padding: 20px 25px !important; text-align: right; text-transform: capitalize;">
+<p>Order Total - <span style="padding-left: 10px !important;">{$currency_symbol}{$order_total}</span></p>
+</td>
+</tr>
+</tfoot>
+</table>
+{/if}
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$seller_name|default:"seller"}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$oid}-Order ID
+{$item_names}-Fulfilled Product details
+{$store_contact}-Seller contact number.
+{$store_description}-Seller store description.
+{$customer_email}-Customer email.
+{$customer_name}-Customer name
+{$shipping_details}-Shipping Details.
+{$billing_details}-Billing details.
+{$customer_contact}-Customer contact number.

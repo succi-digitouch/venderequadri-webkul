@@ -1,0 +1,8 @@
+OGGETTO: Pagamento Ricevuto
+---
+Gentile {$shop},
+
+La informiamo che è stato effettuato un pagamento di {$amount} a Suo favore.
+
+Cordiali saluti
+{$seller_name}

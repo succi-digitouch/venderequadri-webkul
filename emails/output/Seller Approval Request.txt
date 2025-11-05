@@ -1,0 +1,14 @@
+OGGETTO: Richiesta approvazione venditore
+---
+Gentile {$shop}
+
+La informo che il mio account è inattivo.
+
+La prego di attivare il mio account affinché possa gestire le mie vendite.
+
+Nome Venditore: {$seller_detail.seller_name}
+Email: {$seller_detail.email}
+Stato: Inattivo
+
+Cordiali saluti
+{$seller_name}

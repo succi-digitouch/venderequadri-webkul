@@ -1,0 +1,8 @@
+OGGETTO: OTP Modifica email venditore - notifica Admin
+---
+Gentile Admin
+
+La password monouso per modificare l'email del venditore è {$otp_for_email_change}. Questo codice è valido per 10 minuti.
+
+Cordiali saluti
+{$shop}

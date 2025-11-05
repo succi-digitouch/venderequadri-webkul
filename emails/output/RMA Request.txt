@@ -1,0 +1,12 @@
+OGGETTO: Richiesta RMA avviata
+---
+Gentile {$seller_name}
+
+La informiamo che è stata avviata una richiesta di {$rma_type} per l'ordine #{$oid}.
+
+Commento/Motivo: {$comment}
+
+Acceda al Suo account per maggiori dettagli.
+
+Cordiali saluti
+{$shop}

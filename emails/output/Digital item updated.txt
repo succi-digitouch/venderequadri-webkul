@@ -1,0 +1,17 @@
+OGGETTO: Il suo prodotto digitale è stato aggiornato
+---
+Gentile {$customer}
+
+Il Suo file digitale relativo all'ordine {$order_name} è stato aggiornato.
+
+Di seguito trova il link per scaricare il file aggiornato.
+
+Prodotto: {$dl_product.product_name}
+File: {$dl_product.file_name} ({$dl_product.file_size}kb)
+Link download: {$dl_product.link}
+
+Scadenza: {$dl_product.expire_date}
+Download massimi: {$dl_product.dl}
+
+Cordiali saluti
+{$shop}

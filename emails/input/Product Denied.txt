@@ -1,0 +1,19 @@
+SUBJECT: Product Denied
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 0.5em 0; font-size: 15px; font-weight: 600; padding: 0;">Hello <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>This is to inform you that the product (#{$pid}) has been denied{if $pdel} and deleted{/if}.</p>
+<div style="margin-top: 1em; margin-bottom: 1em;">
+<p>Reason for denying this product:</p>
+<p>{$deny_reason}</p>
+</div>
+<p><strong>Product details</strong></p>
+{$product_details}
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name

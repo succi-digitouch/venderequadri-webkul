@@ -1,0 +1,40 @@
+SUBJECT: Items are fulfilled
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$customer_name}</span></h3>
+<p>This is to inform you that following items are fulfilled and have now been shipped.</p>
+{$fulfilled_items_details}
+<p><mark>{if $tracking given}</mark></p>
+<p>You can track your items.</p>
+<p>Tracking number: {$tracking}</p>
+<p><mark>{if $shipping_method given}</mark></p>
+<p>Shipping method: {$shipping_method}</p>
+<p><mark>{/if}</mark></p>
+<p><mark>{/if}</mark></p>
+<p><mark>{if $store_name given}</mark></p>
+<p>Store Name: {$store_name}</p>
+<p><mark>{/if}</mark></p>
+<p><mark>{if $seller_name given}</mark></p>
+<p>Vendor Name: {$seller_name}</p>
+<p><mark>{/if}</mark></p>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$customer_name}-Name of customer
+{$shop}-Shop Name
+{$fulfilled_items_details}-Details of fulfilled products
+{$tracking}-Tracking number of order
+{$shipping_method}-Shipping method of order
+{$store_name}-Show Vendor's store Name
+{$seller_name}-Show Vendor's Name
+{$order_note}-Show Order note
+{$order_name}-Shopify Order Name
+{$seller_name}-Seller Name
+{$seller_email}-Seller Email
+{$seller_country_name}-Seller Country Name
+{$seller_state_name}-Seller State Name
+{$seller_zipcode}-Seller Zipcode
+{$seller_store_address}-Seller Store Address
+{$discount_amount}-Discount Amount.

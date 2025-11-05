@@ -1,0 +1,8 @@
+OGGETTO: Notifica ferie venditore
+---
+Gentile {$shop}
+
+Il Suo venditore ({$seller_name}) sarà in ferie dal {$from_date} al {$to_date}.
+
+Cordiali saluti
+{$shop}

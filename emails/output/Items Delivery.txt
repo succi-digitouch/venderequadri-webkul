@@ -1,0 +1,16 @@
+OGGETTO: Articoli consegnati
+---
+Gentile {$shop}
+
+La informiamo che il venditore ha consegnato con successo i prodotti dell'ordine.
+
+Dettagli ordine consegnato:
+
+ID Ordine | Nome Prodotto | Prezzo | Quantità | Subtotale
+#{$oid} | {$item_names[$key]} | {$currency_symbol}{$value.price} | {$quantity[$key]} | {$currency_symbol}{$sub_total[$key]}
+
+Totale Ordine: {$currency_symbol}{$order_total}
+Stato Pagamento: {$payment_status}
+
+Cordiali saluti
+{$seller_name}

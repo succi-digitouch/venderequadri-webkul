@@ -1,0 +1,16 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile utente,</h3>
+<p>La informiamo che il seguente webhook non sta restituendo una risposta 200 OK.</p>
+<p>Il Suo webhook per {$topic} all'indirizzo {$webhook_url} non riesce a restituire una risposta di consegna positiva.</p>
+<p>Finora, questo webhook è stato tentato {$total_attempt} volte. Nel caso in cui il Suo webhook continui a fallire, verrà rimosso e la Sua applicazione non riceverà più ulteriori notifiche.</p>
+<hr />
+<p>{if !empty($failed_webhook)}</p>
+<h3>Fallimenti recenti:</h3>
+<p>{foreach $failed_webhook as $value}</p>
+<p>Timestamp in UTC: {$value.timestamp}</p>
+<p>Errore: {$value.error}</p>
+<p>Negozio: {$shop}</p>
+<p>{/foreach} {/if}</p>
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Team API Multivendor</h3>
+</div>

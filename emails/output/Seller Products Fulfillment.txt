@@ -1,0 +1,8 @@
+OGGETTO: Ordine evaso
+---
+Gentile {$seller_name}
+
+La informiamo che i prodotti del Suo ordine #{$oid} sono stati evasi.
+
+Cordiali saluti
+{$shop}

@@ -1,0 +1,37 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile <span style="color: #2a5b8b;">{$shop|default:"admin"},</span></h3>
+<p>La informiamo che l'ordine #{$oid} è stato modificato/aggiornato.</p>
+{if !empty($new_product_details) && $new_product_details} {foreach $new_product_details as $key => $value}
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px;">
+<tbody>
+<tr>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">ID Ordine</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Numero Ordine Shopify</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">ID Venditore</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Nome Negozio Venditore</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">ID Prodotto</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Nome Prodotto</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Immagine Prodotto</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Prezzo Variante</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">QTÀ Aggiunta</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">QTÀ Rimossa</th>
+</tr>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">#{$value.oid|escape:"htmlall"}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$value.order_name}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$seller_id_mail}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$seller_store_name}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$value.product_id|escape:"htmlall"}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$value.product_name|escape:"htmlall"}</td>
+<td width="100" style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{if empty($value.img_url)} <img style="max-height: 100px; max-width: 100px; border: 1px solid #D6DDE9;" src="{$smarty.const._SERVER_}img/No-image/No-Image-140x140.png" width="100" height="100" />{else}<img style="max-height: 100px; max-width: 100px; border: 1px solid #D6DDE9;" src="{$value.img_url}" width="100" height="100" />{/if}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$value.variable_price}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$value.quantity}</td>
+</tr>
+</tbody>
+</table>
+{foreachelse}
+<p>Nessun Prodotto.</p>
+{/foreach} {/if}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>

@@ -1,0 +1,12 @@
+OGGETTO: Verifica account
+---
+Gentile {$seller_name}
+
+Grazie per essersi registrato come venditore sul marketplace.
+
+Prima di iniziare, dobbiamo verificare la Sua email.
+
+Verifica la Sua Email: {$email_verification_link}
+
+Cordiali saluti
+{$shop}

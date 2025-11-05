@@ -1,0 +1,12 @@
+OGGETTO: Evadi il tuo ordine
+---
+Gentile {$seller_name}
+
+Le ricordiamo che non ha ancora evaso il Suo ordine.
+
+La preghiamo di controllare ed evadere i Suoi ordini il prima possibile.
+
+{$order_summary}
+
+Cordiali saluti
+{$shop}

@@ -1,0 +1,20 @@
+OGGETTO: Ordine effettuato
+---
+Gentile {$seller_name}
+
+La informiamo che è stato effettuato un ordine.
+
+La preghiamo di accedere al Suo account venditore per evadere i prodotti dell'ordine.
+
+Dettagli Ordine:
+ID Ordine: #{$oid}
+Nome Ordine: {$order_name}
+
+Totale Ordine: {$currency_symbol}{$order_total}
+Stato Pagamento: {$payment_status}
+
+Spedizione Venditore: {$currency}{$seller_shipping}
+Indirizzo di spedizione: {$shipping_address}
+
+Cordiali saluti
+{$shop}

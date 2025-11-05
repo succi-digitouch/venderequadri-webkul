@@ -1,0 +1,29 @@
+<div style="padding: 38px 20px; background-color: #ffffff;">
+<div style="color: #252525; font-weight: 400; font-size: 17px;">Gentile<span style="color: #2a5b8b; font-weight: bold; font-size: 17px;"> {$store_owner_name},</span></div>
+<div style="color: #252525; font-weight: 400; font-size: 17px;">I seguenti ordini <span style="color: #2a5b8b; font-weight: 400; font-size: 17px;"></span> non sono stati sincronizzati con il negozio del rispettivo venditore. La preghiamo di sincronizzarli manualmente. <br /><i><i>Possibili motivi per cui l'ordine non si è sincronizzato:</i></i>
+<ol>
+<li>Potrebbe aver abilitato l'impostazione "sincronizzazione su ordine pagato".</li>
+<li>La disponibilità del prodotto ordinato potrebbe essere zero nel negozio del venditore.</li>
+<li>Potrebbero mancare i dati di fatturazione o spedizione dall'ordine.</li>
+</ol>
+</div>
+<div>
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px; word-break: break-word;">
+<thead>
+<tr>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">ID Ordini</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Nome Venditore</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Nome Connector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$order_ids}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$seller_name}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$connector_name}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="color: #2a5b8b; font-weight: 400; font-size: 17px;">Cordiali saluti<br />{$MVM}</p>
+</div>

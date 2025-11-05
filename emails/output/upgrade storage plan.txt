@@ -1,0 +1,14 @@
+OGGETTO: Aggiornamento piano di archiviazione
+---
+Gentile Admin
+
+La informiamo che il Suo piano di archiviazione Multivendor Marketplace è stato aggiornato.
+
+Dettagli:
+Nome Piano: {$plan.plan_name}
+Dati Piano: {$plan.plan_data} GB
+Prezzo Piano: ${$plan.plan_price}.00
+Data: {$time}
+Importo Fatturato: ${$chargeDetail.price}
+
+MultiVendor Marketplace

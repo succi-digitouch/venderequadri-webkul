@@ -1,0 +1,11 @@
+OGGETTO: Prodotto approvato
+---
+Gentile {$seller_name}
+
+Il Suo prodotto è stato approvato.
+
+Dettagli prodotto:
+{$product_details}
+
+Cordiali saluti
+{$shop}

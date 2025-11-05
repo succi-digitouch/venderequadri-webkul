@@ -1,0 +1,10 @@
+OGGETTO: Verifica negozio SSO multivendor seller
+---
+Gentile {$connecting_shop_name}
+
+Desideriamo stabilire una connessione SSO con il Suo negozio.
+
+Per effettuare questa connessione, può utilizzare questo codice di verifica {$verification_code} per la verifica della connessione.
+
+Cordiali saluti
+{$shop}

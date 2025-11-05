@@ -1,0 +1,8 @@
+OGGETTO: Rilevato ordine ad alto rischio
+---
+Gentile {$seller_name},
+
+L'ordine ID {$oid} è risultato fraudolento. La preghiamo di contattare l'amministratore per contrassegnarlo come sicuro ed evadere l'ordine.
+
+Cordiali saluti
+{$shop}

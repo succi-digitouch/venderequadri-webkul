@@ -1,0 +1,14 @@
+OGGETTO: Annullamento Evasione Ordine
+---
+Gentile {$shop}
+
+La informiamo che il venditore ha annullato l'evasione dei prodotti dell'ordine #{$oid}.
+
+Prodotti:
+Nome Prodotto | Prezzo | Quantità
+{$value.product_name} | {$currency_symbol}{$value.price} | {$quantity[$key]}
+
+Totale Ordine: {$currency_symbol}{$order_total}
+
+Cordiali saluti
+{$seller_name}

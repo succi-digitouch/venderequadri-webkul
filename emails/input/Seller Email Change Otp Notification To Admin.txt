@@ -1,0 +1,13 @@
+SUBJECT: Seller Email Change Otp Notification To Admin
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello!! <span style="color: #2a5b8b;"></span></h3>
+<p>One time password for change seller email is {$otp_for_email_change} this code is valid for 10 minutes</p>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop|default:"Admin"}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name

@@ -1,0 +1,18 @@
+OGGETTO: Ordine evaso dal venditore
+---
+Gentile {$shop}
+
+La informiamo che il venditore ha evaso i prodotti dell'ordine (#{$oid}).
+
+Dettagli ordine:
+ID Ordine: #{$oid}
+ID Ordine Shopify: #{$store_order_id}
+Nome Prodotto: {$value.product_name}
+Prezzo: {$currency_symbol}{$value.price}
+Quantità: {$quantity[$key]}
+Subtotale: {$currency_symbol}{$sub_total[$key]}
+
+Totale Ordine: {$currency_symbol}{$order_total}
+
+Cordiali saluti
+{$seller_name}

@@ -1,0 +1,10 @@
+OGGETTO: Prodotto modificato
+---
+Gentile Admin,
+
+Il Suo venditore {$seller_name} ha apportato modifiche al seguente prodotto.
+
+#{$pid} - {$product_name}
+
+Cordiali saluti
+{$seller_store_name}

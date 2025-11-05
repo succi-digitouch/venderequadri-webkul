@@ -1,0 +1,12 @@
+OGGETTO: Richiesta approvazione prodotto
+---
+Gentile {$shop}
+
+La informiamo che il prodotto non è stato approvato.
+
+La preghiamo di approvare il prodotto.
+
+{$product_details}
+
+Cordiali saluti
+{$seller_name}

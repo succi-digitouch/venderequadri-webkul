@@ -1,0 +1,17 @@
+SUBJECT: Seller Payout Payment Failed
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello Admin,</h3>
+<p>This is to inform you that the payout transaction for the following seller has <strong>failed</strong>:</p>
+<ul>
+<li><strong>Seller Name:</strong> {$seller_name}</li>
+<li><strong>Seller ID:</strong> {$seller_id}</li>
+<li><strong>Transaction ID:</strong> {$transaction_id}</li>
+<li><strong>Reason:</strong> {$reason}</li>
+</ul>
+<p>Please review and take necessary action.</p>
+<p>Regards,<br /> <strong>{$shop}</strong></p>
+</div>
+---
+VARIABLES
+{$shop}-Shop Name

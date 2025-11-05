@@ -1,0 +1,15 @@
+SUBJECT: High Risk Order Detected
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">Hello <span style="color: #2a5b8b;">{$seller_name},</span></h3>
+<p>Order ID <b>{$oid}</b> has been found fraudulent. please contact with admin to mark it safe to fulfill the order .</p>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$oid}-Order ID
+{$shopify_order_id}-Shopify Order Id.

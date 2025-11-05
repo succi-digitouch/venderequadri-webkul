@@ -1,0 +1,11 @@
+OGGETTO: Prodotto eliminato
+---
+Gentile Admin,
+
+Il Suo venditore {$seller_name} ha rimosso il seguente prodotto.
+
+ID Prodotto: {$pid}
+Nome Prodotto: {$product_name}
+
+Cordiali saluti
+{$seller_store_name}

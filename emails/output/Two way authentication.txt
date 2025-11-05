@@ -1,0 +1,12 @@
+OGGETTO: Codice 2FA per accesso account
+---
+Gentile {$username}
+
+Il Suo OTP per l'accesso a {$store_name} è {$otp_code}.
+
+Non condivida questo codice con nessuno.
+
+È valido per 10 minuti.
+
+Cordiali saluti
+{$shop}

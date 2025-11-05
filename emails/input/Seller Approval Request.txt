@@ -1,0 +1,33 @@
+SUBJECT: Seller Approval Request
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$shop|default:"admin"}</span></h3>
+<p>This is to inform you that my account is inactive.</p>
+<p>Please activate my account so that I can manage my sales.</p>
+{if !empty($seller_detail) &amp;&amp; $seller_detail}
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px;">
+<tbody>
+<tr style="text-transform: capitalize;">
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Seller Name</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Seller Email</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Status</th>
+</tr>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$seller_detail.seller_name|escape:"htmlall"}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$seller_detail.email}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{if ({$seller_detail.active} == 1)} Active {else} Inactive {/if}</td>
+</tr>
+</tbody>
+</table>
+{/if}
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$seller_name|default:"seller"}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$seller_details}-Details of the Seller
+{$seller_detail.seller_name}-Seller Name
+{$seller_detail.email}-Seller Email{$seller_detail.active}-Seller Status

@@ -1,0 +1,15 @@
+OGGETTO: Pagamento venditore fallito
+---
+Gentile Admin,
+
+La informiamo che la transazione di pagamento per il seguente venditore è fallita:
+
+Nome Venditore: {$seller_name}
+ID Venditore: {$seller_id}
+ID Transazione: {$transaction_id}
+Motivo: {$reason}
+
+La preghiamo di verificare e agire di conseguenza.
+
+Cordiali saluti,
+{$shop}

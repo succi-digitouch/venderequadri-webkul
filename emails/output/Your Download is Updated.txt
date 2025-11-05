@@ -1,0 +1,12 @@
+OGGETTO: Il Tuo Download è stato aggiornato
+---
+Gentile {$customer_name}
+
+Il Suo ordine numero {$order_name} per {$product_name} è stato aggiornato.
+
+Ora può scaricare il prodotto utilizzando il link aggiornato:
+{$file_name}
+{$dl_link}
+
+Cordiali saluti
+{$shop}

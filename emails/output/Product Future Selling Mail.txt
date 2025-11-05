@@ -1,0 +1,12 @@
+OGGETTO: Prodotto disponibile per la vendita
+---
+Gentile {$seller_name}
+
+Siamo lieti di informarLa che il prodotto è ora disponibile per l'acquisto. Come da programmazione da Lei impostata, i clienti possono ora acquistare il prodotto.
+
+ID Prodotto: {$product_id}
+Nome Prodotto: {$product_name}
+Quantità: {$quantity}
+
+Cordiali saluti
+{$shop}

@@ -1,0 +1,21 @@
+SUBJECT: Products Bulk Edit Completed
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;"></span></h3>
+<p>This is to inform you that the products have been successfully updated through Bulk Edit CSV.</p>
+<p>Check Your Products</p>
+{if $price_error}
+<div>
+<p>Note :</p>
+<p>Some products price may not be updated as their price cannot be less than commission.</p>
+</div>
+{/if}
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop|default:"admin"}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$price_error}-Price Error

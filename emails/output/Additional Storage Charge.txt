@@ -1,0 +1,19 @@
+OGGETTO: Addebito per Spazio di Archiviazione Aggiuntivo
+
+---
+
+Gentile Admin
+
+La informiamo che le è stato addebitato ${$chargeDetail.price} per il suo piano di archiviazione aggiuntivo mensile.
+
+Dettagli:
+
+Nome Piano: {$plan_name}
+Dati Piano (GB): {$plan.plan_data}
+Prezzo Piano: ${$plan.plan_price}.00
+Data Transazione ({$timezone}): {$time}
+Importo Fatturato: ${$chargeDetail.price}
+
+Cordiali saluti
+
+MultiVendor Marketplace

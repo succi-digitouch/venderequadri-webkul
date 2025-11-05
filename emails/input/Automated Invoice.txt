@@ -1,0 +1,16 @@
+SUBJECT: Automated Invoice
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$seller_name}</span></h3>
+<p>An automated invoice has been created for orders between {$from_date} and {$to_date}.</p>
+<a href="{eval var=$seller_url}{if !empty($redirect_url)}&amp;redirect_url={$redirect_url}{/if}" target="_blank" rel="noopener noreferrer">Click here to download your invoice.</a>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop}</h3>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name
+{$from_date}-From Date To Genrated Invoice
+{$to_date}-To Date To Genrated Invoice

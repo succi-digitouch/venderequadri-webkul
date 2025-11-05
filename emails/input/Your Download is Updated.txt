@@ -1,0 +1,18 @@
+SUBJECT: Your Download is Updated
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello <span style="color: #2a5b8b;">{$customer_name|default:"customer"}</span></h3>
+<p>Your order Number {$order_name} for the {$product_name} has been updated.</p>
+<p>You can now download the product using the updated link:</p>
+<p>{$file_name}</p>
+<p><a style="text-decoration: none; font-weight: 600; color: #fff; background: #46a2e0; padding: 12px 30px; line-height: 16px; font-size: 16px; display: inline-block; border-radius: 3px;" href="{$dl_link}">Download</a></p>
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop|default:"admin"}</h3>
+</div>
+---
+VARIABLES
+{$customer_name}-Name of customer
+{$shop}-Shop Name
+{$order_name}-Shopify Order Name
+{$product_name}-Product Name
+{$file_name}-File Name

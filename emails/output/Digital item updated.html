@@ -1,0 +1,15 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile <span style="color: #2a5b8b;">{$customer|default:"cliente"}</span></h3>
+<p>Il Suo file digitale relativo all'ordine {$order_name} è stato aggiornato.</p>
+<p>Di seguito trova il link per scaricare il file aggiornato.</p>
+<p>{$dl_product.product_name}</p>
+<p>{$dl_product.file_name} ({$dl_product.file_size}kb)</p>
+<p><a style="text-decoration: none; font-weight: 600; color: #fff; background: #46a2e0; padding: 12px 30px; line-height: 16px; font-size: 16px; display: inline-block; border-radius: 3px;" href="{$dl_product.link}">Scarica</a></p>
+<div style="color: #252525; font-size: 13px;">{if !empty($dl_product.expire_date)}
+<p>Scadenza: {$dl_product.expire_date}</p>
+{/if}
+<p>Download massimi: {if empty($dl_product.dl)}Illimitati{else}{$dl_product.dl}{/if}</p>
+</div>
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop|default:"admin"}</h3>
+</div>

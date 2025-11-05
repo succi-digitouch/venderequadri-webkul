@@ -1,0 +1,11 @@
+OGGETTO: Venditore rifiutato
+---
+Gentile {$seller_name}
+
+La informiamo che il Suo account è stato rifiutato dal merchant.
+
+Motivo del rifiuto:
+{$deny_reason}
+
+Cordiali saluti
+{$shop}

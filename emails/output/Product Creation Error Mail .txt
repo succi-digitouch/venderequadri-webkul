@@ -1,0 +1,13 @@
+OGGETTO: Errore creazione prodotto
+---
+Gentile Utente
+
+Errore nella creazione del prodotto # {$product_id}
+
+Si è verificato un errore, la preghiamo di riprovare più tardi.
+
+Dettagli Errore:
+{$error_message}
+
+Cordiali saluti
+{$shop}

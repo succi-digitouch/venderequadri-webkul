@@ -1,0 +1,13 @@
+OGGETTO: Benvenuto
+---
+Gentile {$seller_name}
+
+La informiamo che è stato aggiunto come venditore in {$shop}.
+
+Le Sue credenziali di accesso sono riportate di seguito:
+{$seller_credentials}
+
+Accedi al link: {$public_url}
+
+Cordiali saluti
+{$shop}

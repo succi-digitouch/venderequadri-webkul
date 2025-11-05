@@ -1,0 +1,17 @@
+OGGETTO: Il Tuo Webhook sta fallendo
+---
+Gentile utente,
+
+La informiamo che il seguente webhook non sta restituendo una risposta 200 OK.
+
+Il Suo webhook per {$topic} all'indirizzo {$webhook_url} non riesce a restituire una risposta di consegna positiva.
+
+Finora, questo webhook è stato tentato {$total_attempt} volte. Nel caso in cui il Suo webhook continui a fallire, verrà rimosso e la Sua applicazione non riceverà più ulteriori notifiche.
+
+Fallimenti recenti:
+Timestamp: {$value.timestamp}
+Errore: {$value.error}
+Negozio: {$shop}
+
+Cordiali saluti
+Team API Multivendor

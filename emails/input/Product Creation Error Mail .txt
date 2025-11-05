@@ -1,0 +1,17 @@
+SUBJECT: Product Creation Error Mail
+---
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Hello</h3>
+<p>Error in Product # {$product_id} Creation</p>
+<p>Some Error Occured, please try again later</p>
+{if $error_message}
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Error Details:</h3>
+{$error_message} {/if}
+<p>Regards</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop|default:"admin"}</h3>
+</div>
+---
+VARIABLES
+{$shop}-Shop Name
+{$product_id}-Product Id
+{$error_message}-Error Message

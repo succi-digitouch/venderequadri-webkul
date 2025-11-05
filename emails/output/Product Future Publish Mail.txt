@@ -1,0 +1,12 @@
+OGGETTO: Prodotto pubblicato automaticamente
+---
+Gentile {$seller_name}
+
+La informiamo che il prodotto è stato pubblicato come programmato. Il prodotto è ora attivo sul negozio e visibile ai clienti.
+
+ID Prodotto: {$product_id}
+Nome Prodotto: {$product_name}
+Quantità: {$quantity}
+
+Cordiali saluti
+{$shop}

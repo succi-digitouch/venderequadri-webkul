@@ -1,0 +1,36 @@
+SUBJECT: Connector Order Synchronization Fail
+---
+<div style="padding: 38px 20px; background-color: #ffffff;">
+<div style="color: #252525; font-weight: 400; font-size: 17;">Dear<span style="color: #2a5b8b; font-weight: bold; font-size: 17;"> {$store_owner_name},</span></div>
+<div style="color: #252525; font-weight: 400; font-size: 17;">Following orders <span style="color: #2a5b8b; font-weight: 400; font-size: 17;"></span> has not been synced to respective seller's connector store, please sync them manually. <br /><i><i>Possible reason for order not syncing:</i></i>
+<ol>
+<li>You might have enabled "sync on paid order" setting.</li>
+<li>Stock of ordered product might be zero on seller's connector store.</li>
+<li>Billing or shipping might be missing from the order.</li>
+</ol>
+</div>
+<div>
+<table style="border: 1px solid #73b9b8; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; font-size: 14px; word-break: break-word;">
+<thead>
+<tr>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Order IDs</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Seller Name</th>
+<th style="font-weight: 600; border: 1px solid #73b9b8; padding: 8px; text-align: center;">Connector Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$order_ids}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$seller_name}</td>
+<td style="font-weight: 400; border: 1px solid #73b9b8; padding: 8px;">{$connector_name}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="color: #2a5b8b; font-weight: 400; font-size: 17;">Regards<br />{$MVM}</p>
+</div>
+---
+VARIABLES
+{$seller_name}-Seller Name
+{$seller_store_name}-Seller Store Name
+{$shop}-Shop Name

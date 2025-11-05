@@ -1,0 +1,10 @@
+OGGETTO: Notifica per il venditore
+---
+Gentile {$seller_name},
+
+{$notification_content}
+
+La preghiamo di esaminare e procedere con le azioni necessarie.
+
+Cordiali saluti,
+{$shop}

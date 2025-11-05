@@ -1,0 +1,12 @@
+OGGETTO: Il Tuo download è pronto
+---
+Gentile {$customer_name}
+
+Grazie per aver fatto acquisti con noi. Il Suo ordine numero {$order_name} è pronto per il download!
+
+Scarichi {$product_name} utilizzando il seguente link:
+{$file_name}
+{$dl_link}
+
+Cordiali saluti
+{$shop}

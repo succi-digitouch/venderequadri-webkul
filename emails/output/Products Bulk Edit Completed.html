@@ -1,0 +1,13 @@
+<div style="line-height: 18px; font-size: 15px;">
+<h3 style="margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">Gentile Venditore <span style="color: #2a5b8b;"></span></h3>
+<p>La informiamo che i prodotti sono stati aggiornati con successo tramite Modifica Massiva CSV.</p>
+<p>Controlli i Suoi Prodotti</p>
+{if $price_error}
+<div>
+<p>Nota:</p>
+<p>Alcuni prezzi dei prodotti potrebbero non essere stati aggiornati perché il prezzo non può essere inferiore alla commissione.</p>
+</div>
+{/if}
+<p>Cordiali saluti</p>
+<h3 style="color: #2a5b8b; margin: 8px 0; font-size: 15px; font-weight: 600; padding: 0; text-transform: capitalize;">{$shop|default:"admin"}</h3>
+</div>
